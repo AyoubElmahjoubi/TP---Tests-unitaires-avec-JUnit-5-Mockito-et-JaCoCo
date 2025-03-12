@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e422d93-2e0c-4236-8079-941eedd0fe3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exemple/CompteBancaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/exemple/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/exemple/CompteBancaireTest.java" afterDir="false" />
+    <list default="true" id="5e422d93-2e0c-4236-8079-941eedd0fe3d" name="Changes" comment="les test unitaires de la premier partie de tp sans class Notification">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/exemple/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/exemple/CompteBancaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/exemple/CompteBancaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/exemple/CompteBancaireTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/exemple/CompteBancaireTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +19,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
@@ -47,8 +47,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.CompteBancaireTest.deposer.executor": "Run",
+    "JUnit.CompteBancaireTest.executor": "Run",
     "JUnit.CompteBancaireTest.getSolde.executor": "Run",
     "JUnit.CompteBancaireTest.retirer.executor": "Run",
+    "JUnit.CompteBancaireTest.test_creation_compte_avec_solde_initial_negatif.executor": "Run",
+    "JUnit.CompteBancaireTest.test_deux_depot_successif.executor": "Run",
+    "JUnit.CompteBancaireTest.test_interaction_complexe_avec_plusieurs_mocks.executor": "Run",
+    "JUnit.CompteBancaireTest.test_retirer_montant_negatif.executor": "Run",
+    "JUnit.CompteBancaireTest.test_retrait_avec_montant_superieu_au_solde.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -61,8 +67,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompteBancaireTest.deposer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CompteBancaireTest.test_creation_compte_avec_solde_initial_negatif" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_junit" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +107,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.exemple" />
       <option name="MAIN_CLASS_NAME" value="com.exemple.CompteBancaireTest" />
-      <option name="METHOD_NAME" value="deposer" />
+      <option name="METHOD_NAME" value="test_creation_compte_avec_solde_initial_negatif" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompteBancaireTest.getSolde" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CompteBancaireTest.test_deux_depot_successif" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_junit" />
       <extension name="coverage">
         <pattern>
@@ -116,13 +123,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.exemple" />
       <option name="MAIN_CLASS_NAME" value="com.exemple.CompteBancaireTest" />
-      <option name="METHOD_NAME" value="getSolde" />
+      <option name="METHOD_NAME" value="test_deux_depot_successif" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompteBancaireTest.retirer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CompteBancaireTest.test_interaction_complexe_avec_plusieurs_mocks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tp_junit" />
       <extension name="coverage">
         <pattern>
@@ -132,7 +139,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.exemple" />
       <option name="MAIN_CLASS_NAME" value="com.exemple.CompteBancaireTest" />
-      <option name="METHOD_NAME" value="retirer" />
+      <option name="METHOD_NAME" value="test_interaction_complexe_avec_plusieurs_mocks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompteBancaireTest.test_retirer_montant_negatif" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tp_junit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.exemple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.exemple" />
+      <option name="MAIN_CLASS_NAME" value="com.exemple.CompteBancaireTest" />
+      <option name="METHOD_NAME" value="test_retirer_montant_negatif" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,9 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CompteBancaireTest" />
-        <item itemvalue="JUnit.CompteBancaireTest.retirer" />
-        <item itemvalue="JUnit.CompteBancaireTest.deposer" />
-        <item itemvalue="JUnit.CompteBancaireTest.getSolde" />
+        <item itemvalue="JUnit.CompteBancaireTest.test_interaction_complexe_avec_plusieurs_mocks" />
+        <item itemvalue="JUnit.CompteBancaireTest.test_deux_depot_successif" />
+        <item itemvalue="JUnit.CompteBancaireTest.test_creation_compte_avec_solde_initial_negatif" />
+        <item itemvalue="JUnit.CompteBancaireTest.test_retirer_montant_negatif" />
       </list>
     </recent_temporary>
   </component>
@@ -163,11 +187,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741737934752</updated>
-      <workItem from="1741737936643" duration="1253000" />
+      <workItem from="1741737936643" duration="7062000" />
     </task>
+    <task id="LOCAL-00001" summary="les test unitaires de la premier partie de tp sans class Notification">
+      <option name="closed" value="true" />
+      <created>1741739459894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741739459894</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="les test unitaires de la premier partie de tp sans class Notification" />
+    <option name="LAST_COMMIT_MESSAGE" value="les test unitaires de la premier partie de tp sans class Notification" />
   </component>
 </project>

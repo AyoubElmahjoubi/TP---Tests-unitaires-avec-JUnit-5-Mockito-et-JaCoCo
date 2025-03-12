@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CompteBancaire.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tp_junit</a> &gt; <a href="index.source.html" class="el_package">com.exemple</a> &gt; <span class="el_source">CompteBancaire.java</span></div><h1>CompteBancaire.java</h1><pre class="source lang-java linenums">package com.exemple;
+
+public class CompteBancaire {
+
+    private double solde;
+    private NotificationService notificationService;
+
+<span class="fc" id="L8">    public CompteBancaire() {</span>
+<span class="fc" id="L9">    }</span>
+
+<span class="fc" id="L11">    public CompteBancaire(double soldeInitial, NotificationService notificationService) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if (soldeInitial &lt; 0) {</span>
+<span class="fc" id="L13">            throw new IllegalArgumentException(&quot;Le solde initial ne peut pas être négatif.&quot;);</span>
+        }
+<span class="fc" id="L15">        this.solde = soldeInitial;</span>
+<span class="fc" id="L16">        this.notificationService = notificationService;</span>
+<span class="fc" id="L17">    }</span>
+
+<span class="nc" id="L19">    public CompteBancaire(double soldeInitial) {</span>
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        if (soldeInitial &lt; 0) {</span>
+<span class="nc" id="L21">            throw new IllegalArgumentException(&quot;Le solde initial ne peut pas être négatif.&quot;);</span>
+        }
+<span class="nc" id="L23">        this.solde = soldeInitial;</span>
+<span class="nc" id="L24">    }</span>
+
+    public double getSolde() {
+<span class="fc" id="L27">        return solde;</span>
+    }
+
+    public void deposer(double montant) {
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (montant &lt;= 0) {</span>
+<span class="fc" id="L32">            throw new IllegalArgumentException(&quot;Le montant du dépôt doit être positif.&quot;);</span>
+        }
+<span class="fc" id="L34">        solde += montant;</span>
+<span class="fc" id="L35">        notificationService.envoyerNotification(&quot;Dépôt de &quot; + montant + &quot; effectué.&quot;);</span>
+<span class="fc" id="L36">    }</span>
+
+    public void retirer(double montant) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (montant &lt;= 0) {</span>
+<span class="fc" id="L40">            throw new IllegalArgumentException(&quot;Le montant du retrait doit être positif.&quot;);</span>
+        }
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (montant &gt; solde) {</span>
+<span class="fc" id="L43">            throw new IllegalArgumentException(&quot;Fonds insuffisants.&quot;);</span>
+        }
+<span class="fc" id="L45">        solde -= montant;</span>
+<span class="fc" id="L46">        notificationService.envoyerNotification(&quot;Retrait de &quot; + montant + &quot; effectué.&quot;);</span>
+<span class="fc" id="L47">    }</span>
+
+    public void transfererVers(CompteBancaire autreCompte, double montant){
+<span class="fc" id="L50">        this.retirer(montant);</span>
+<span class="fc" id="L51">        autreCompte.deposer(montant);</span>
+<span class="fc" id="L52">        this.notificationService.envoyerNotification(&quot;vous avez transfrer ce montant :&quot;+ montant +&quot; avec succés&quot;);</span>
+<span class="fc" id="L53">        autreCompte.notificationService.envoyerNotification(&quot;un mantant : &quot;+ montant +&quot; à été ajouter dans votre compte avec succés&quot;);</span>
+<span class="fc" id="L54">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
